@@ -1,0 +1,124 @@
+/*
+ * Title:   Miracle | Responsive Multi-Purpose HTML5 Template - Basic Style
+ * Author:  http://themeforest.net/user/soaptheme
+ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[Table of contents]
+
+1) Reset
+2) Heading
+3) Lists
+4) Contents
+5) Table
+6) HTML5 & CSS3 Styles for older browsers
+7) Tools
+8) Color
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@import 'variables';
+
+/* 1) Reset */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    zoom: 1;
+}
+html { font-size: 16px; min-height: 100%; overflow-x: hidden !important; }
+body { font:75%/150% $font-stack; background-color: #fff; color:$primary-color; overflow-x: hidden !important; -webkit-font-smoothing: antialiased; -ms-overflow-style: scrollbar; /*oveflow-y: scroll;*/ }
+
+iframe, img { border:0; }
+img { border-style: none; height: auto; max-width: 100%; vertical-align: top; }
+
+a { text-decoration: none; color: inherit; }
+a:hover, a:focus { text-decoration: none; color: $theme-skin-color; }
+a:focus { outline: none; }
+
+p { font-size: 1.0833em; line-height: 1.8; margin-bottom: 15px; }
+.text {
+  font-size: 1.0833em; margin-bottom: 15px;
+  p { font-size: 1em; }
+  > *:last-child { margin-bottom: 0; }
+}
+dt { font-weight: normal; }
+
+
+/* 2) Heading */
+h1, h2, h3, h4, h5, h6 { margin: 0 0 20px; font-weight: 300; color: $heading-color; }
+h4, h5, h6 { font-weight: 400; }
+h5, h6 { margin-bottom: 10px; }
+h1 { font-size: 2.5em; line-height: 1.25em; }
+h2 { font-size: 2em; line-height: 1.25em; }
+h3 { font-size: 1.6667em; line-height: 1.2222em; }
+h4 { font-size: 1.3333em; line-height: 1.25em; }
+h5 { font-size: 1.1666em; line-height: 1.1428em; }
+h6 { font-size: 1.0833em; }
+
+/* 3) Lists */
+ol, ul { list-style: none; margin: 0; }
+
+/* 4) Contents */
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,  q:before, q:after {
+    content: ''; content: none;
+}
+
+hr { margin-top: 20px; margin-bottom: 20px; border-color: $theme-skin-color; }
+
+small { font-size: 0.8333em; }
+
+/* 5) Table */
+table {
+    border-collapse: collapse; border-spacing: 0;
+}
+
+
+/* 6) HTML5 & CSS3 Styles for older browsers */
+article, aside, details, figcaption, figure,  footer, header, hgroup, menu, nav, section { display:block; }
+
+/* 7) Tools */
+.clearer { clear: both !important; padding: 0 !important; margin: 0 !important; }
+.hidden { display: block !important; border: 0 !important; margin: 0 !important; padding: 0 !important; font-size:0 !important; line-height:0 !important; width: 0 !important; height:0 !important; overflow: hidden !important; }
+.nobr { white-space: nowrap !important; }
+.wrap { white-space: normal !important; }
+.no-display { display: none; }
+.no-float { float: none !important; }
+.no-margin { margin: 0 !important; }
+.no-bmargin { margin-bottom: 0 !important; }
+.no-padding { padding: 0 !important; }
+.no-lpadding { padding-left: 0 !important; }
+.no-rpadding { padding-right: 0 !important; }
+.no-border { border: none !important; }
+.no-bg { background: none !important; }
+.full-width { width: 100% !important; }
+.width-auto { width: auto !important; }
+img.full-width { height: auto; }
+.uppercase { text-transform: uppercase; }
+.fourty-space { letter-spacing: .04em !important; }
+.underline { text-decoration: underline !important; }
+.inline-block { display: inline-block !important; }
+.visible-sms { display: none; } // for max 480 width screen
+.no-letter-spacing { letter-spacing: normal !important; }
+
+.font-light { font-weight: 300 !important; }
+.font-normal { font-weight: 400 !important; }
+.fontsize-lg { font-size: 1.3333em; line-height: 1.5; }
+p.fontsize-lg { line-height: 1.8; }
+
+.overflow-hidden { overflow: hidden; }
+.full-height { height: 100%; }
+
+/* 8) Color */
+.skin-color { color: $theme-skin-color !important; }
+.skin-bg { background-color: $theme-skin-color !important; }
+.skin-bg-alpha { background-color: rgba(red($theme-skin-color), green($theme-skin-color), blue($theme-skin-color), 0.75) !important; }
+
+.color-blue { color: $heading-color !important; }
+.color-light-blue { color: #455b79 !important; }
+.color-white { color: #fff !important; }
+.hover-color-skin:hover { color: $theme-skin-color !important; }
+.hover-color-blue:hover { color: $heading-color !important; }

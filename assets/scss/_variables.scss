@@ -1,0 +1,119 @@
+/*
+ * Title:   Miracle | Responsive Multi-Purpose HTML5 Template - SCSS Variables for style customization
+ * Author:  http://themeforest.net/user/soaptheme
+ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[Table of contents]
+
+1. Global
+2. Skin colors
+3. Skin logos
+4. Important colors
+5. Skin 1
+6. Skin 2
+7. Skin 3
+8. Skin 4
+9. Skin 5
+10. Skin 6
+11. Skin 7
+12. Skin 8
+13. Skin 9
+14. Skin 10
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* 1. Global */
+$font-stack:    'Open Sans', Arial, Helvetica, sans-serif;
+$primary-color: #939faa;
+$primary-light-color: #b6c0c9;
+$heading-color: #1b4268;
+$secondary-color: #d4dde5;
+$mainbg-color: #edf6ff;
+
+/* 2. Theme skin colors */
+$theme-skin-orange: #ff6600;
+$theme-skin-green:  #97cc24;
+$theme-skin-purple: #b53cd3;
+$theme-skin-blue:   #00a2ee;
+$theme-skin-yellow: #ffae00;
+$theme-skin-gray:   #acacac;
+$theme-skin-navy:   #006cff;
+$theme-skin-sea:    #0ab596;
+$theme-skin-red:    #ff1818;
+$theme-skin-gold:   #d9be2b;
+
+/* 3. Skin logos */
+$theme-skin1-logo: "../images/logo/skin1/logo";
+$theme-skin2-logo: "../images/logo/skin2/logo";
+$theme-skin3-logo: "../images/logo/skin3/logo";
+$theme-skin4-logo: "../images/logo/skin4/logo";
+$theme-skin5-logo: "../images/logo/skin5/logo";
+$theme-skin6-logo: "../images/logo/skin6/logo";
+$theme-skin7-logo: "../images/logo/skin7/logo";
+$theme-skin8-logo: "../images/logo/skin8/logo";
+$theme-skin9-logo: "../images/logo/skin9/logo";
+$theme-skin10-logo: "../images/logo/skin10/logo";
+
+/* 4. Important colors */
+
+
+/* 5. Skin 1(Orange) */
+$theme-skin-logo: $theme-skin1-logo;
+$theme-skin-color: $theme-skin-orange;
+$theme-skin-light-bgcolor: #ff7d26;
+$theme-skin-light-fontcolor: #ffc299;
+
+/* 6. Skin 2(Green) */
+/*$theme-skin-logo: $theme-skin2-logo;
+$theme-skin-color: $theme-skin-green;
+$theme-skin-light-bgcolor: #a2d13a;
+$theme-skin-light-fontcolor: #d8eaaf;*/
+
+/* 7. Skin 3(Purple) */
+/*$theme-skin-logo: $theme-skin3-logo;
+$theme-skin-color: $theme-skin-purple;
+$theme-skin-light-bgcolor: #bd50d7;
+$theme-skin-light-fontcolor: #f1c5fb;*/
+
+/* 8. Skin 4(Blue) */
+/*$theme-skin-logo: $theme-skin4-logo;
+$theme-skin-color: $theme-skin-blue;
+$theme-skin-light-bgcolor: #1aabf0;
+$theme-skin-light-fontcolor: #c8e9f9;*/
+
+/* 9. Skin 5(Yellow) */
+/*$theme-skin-logo: $theme-skin5-logo;
+$theme-skin-color: $theme-skin-yellow;
+$theme-skin-light-bgcolor: #ffb61a;
+$theme-skin-light-fontcolor: #f0deb8;*/
+
+/* 10. Skin 6(Gray) */
+/*$theme-skin-logo: $theme-skin6-logo;
+$theme-skin-color: $theme-skin-gray;
+$theme-skin-light-bgcolor: #b4b4b4;
+$theme-skin-light-fontcolor: #d9d9d9;*/
+
+/* 11. Skin 7(Navy) */
+/*$theme-skin-logo: $theme-skin7-logo;
+$theme-skin-color: $theme-skin-navy;
+$theme-skin-light-bgcolor: #1a7bff;
+$theme-skin-light-fontcolor: #c9dcf7;*/
+
+/* 12. Skin(Sea) 8 */
+/*$theme-skin-logo: $theme-skin8-logo;
+$theme-skin-color: $theme-skin-sea;
+$theme-skin-light-bgcolor: #23bda1;
+$theme-skin-light-fontcolor: #cef2eb;*/
+
+/* 13. Skin 9(Red) */
+/*$theme-skin-logo: $theme-skin9-logo;
+$theme-skin-color: $theme-skin-red;
+$theme-skin-light-bgcolor: #ff3030;
+$theme-skin-light-fontcolor: #eec8c8;*/
+
+/* 14. Skin 10(Gold) */
+/*$theme-skin-logo: $theme-skin10-logo;
+$theme-skin-color: $theme-skin-gold;
+$theme-skin-light-bgcolor: #ddc541;
+$theme-skin-light-fontcolor: #eee9cb;*/

@@ -1,0 +1,194 @@
+<div class="product type-product">
+    <div class="row single-product-details">
+        <div class="product-images col-sm-5 box-lg">
+            <div id="sync1" class="owl-carousel images">
+                <div class="item easyzoom easyzoom--overlay">
+                    <a href="http://placehold.it/1132x1296"><img src="http://placehold.it/566x648" alt=""></a>
+                </div>
+                <div class="item easyzoom easyzoom--overlay">
+                    <a href="http://placehold.it/1132x1296"><img src="http://placehold.it/566x648" alt=""></a>
+                </div>
+                <div class="item easyzoom easyzoom--overlay">
+                    <a href="http://placehold.it/1132x1296"><img src="http://placehold.it/566x648" alt=""></a>
+                </div>
+                <div class="item easyzoom easyzoom--overlay">
+                    <a href="http://placehold.it/1132x1296"><img src="http://placehold.it/566x648" alt=""></a>
+                </div>
+                <div class="item easyzoom easyzoom--overlay">
+                    <a href="http://placehold.it/1132x1296"><img src="http://placehold.it/566x648" alt=""></a>
+                </div>
+            </div>
+            <div id="sync2" class="owl-carousel post-slider style3 thumbnails" data-items="4">
+                <div class="item">
+                    <a href="#"><img src="http://placehold.it/154x185" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="http://placehold.it/154x185" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="http://placehold.it/154x185" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="http://placehold.it/154x185" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="http://placehold.it/154x185" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="summary entry-summary col-sm-7 box-lg">
+            <div class="clearfix">
+                <h2 class="product-title entry-title">Geo Dream Dress</h2>
+                <span class="star-rating" title="4" data-toggle="tooltip">
+                    <span style="width: 80%;"></span>
+                </span>
+            </div>
+            <span class="product-price box">$112.00</span>
+            <p>Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis mauris sollicitudin commodo venenatis ligula commodo. Sed blandit convallis dignissim.Donec vel pellentesque neque. Nulla et quam vitae sapien vestibulum molestie.</p>
+            <dl class="product-meta">
+                <dt class="sku-wrapper">SKU:</dt>
+                <dd>0001</dd>
+                <dt class="product-category">Category:</dt>
+                <dd>Fashion</dd>
+                <dt class="taggs">Product Tags:</dt>
+                <dd>brightening, T-shirts</dd>
+            </dl>
+            <form class="variations-form cart">
+                <div class="variations clearfix box">
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="st-td">
+                            <label>Choose Size</label>
+                        </div>
+                        <div class="st-td">
+                            <select class="selector">
+                                <option value="">Select Size</option>
+                                <option value="large">Large</option>
+                                <option value="medium">Medium</option>
+                                <option value="small">Small</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <div class="st-td">
+                            <label>Pickup Color</label>
+                        </div>
+                        <div class="st-td">
+                            <select class="selector">
+                                <option value="">Select Size</option>
+                                <option value="green">Green</option>
+                                <option value="pink">Pink</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-variation-wrap">
+                    <div class="qty-wrap">
+                        <label>Quantity</label>
+                        <input type="text" class="input-text" value="1" name="qty">
+                    </div>
+                    <div class="variation-action">
+                        <a href="#" class="btn btn-medium style1"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                        <a href="#" class="btn btn-medium style2"><i class="fa fa-heart"></i>Add To Wishlist</a>
+                    </div>
+                </div>
+            </form>
+            <div class="social-wrap">
+                <label>Share with friends</label>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa fa-twitter has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                    <a href="#" class="social-icon"><i class="fa fa-facebook has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                    <a href="#" class="social-icon"><i class="fa fa-google-plus has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                    <a href="#" class="social-icon"><i class="fa fa-linkedin has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                    <a href="#" class="social-icon"><i class="fa fa-skype has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                    <a href="#" class="social-icon"><i class="fa fa-dribbble has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                    <a href="#" class="social-icon"><i class="fa fa-tumblr has-circle" data-toggle="tooltip" data-placement="top" title=""></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript">
+		sjq(document).ready(function($) {
+			$("#sync1").imagesLoaded(function() {
+				// woocommerce product zoom
+				var $easyzoom = $('.product-images .easyzoom').easyZoom();
+				var $easyzoomApi = $easyzoom.data('easyZoom');
+			});
+			$("#sync2").imagesLoaded(function() {
+				var sync1 = $("#sync1");
+				var sync2 = $("#sync2");
+				 
+				sync1.owlCarousel({
+					singleItem : true,
+					slideSpeed : 1000,
+					navigation: false,
+					pagination:false,
+					afterAction : syncPosition,
+					responsiveRefreshRate : 200,
+				});
+				 
+				sync2.owlCarousel({
+					items : 3,
+					itemsDesktop : [1199,2],
+					itemsDesktopSmall : [991,2],
+					itemsTablet : [767,2],
+					itemsMobile : [479,2],
+					navigation: true,
+					navigationText: false,
+					pagination:false,
+					responsiveRefreshRate : 100,
+					afterInit: function(el){
+						el.find(".owl-item").eq(0).addClass("synced");
+						el.find(".owl-wrapper").equalHeights();
+					},
+					afterUpdate: function(el) {
+						el.find(".owl-wrapper").equalHeights();
+					}
+				});
+				 
+				function syncPosition(el){
+					var current = this.currentItem;
+					$("#sync2")
+						.find(".owl-item")
+						.removeClass("synced")
+						.eq(current)
+						.addClass("synced")
+					if($("#sync2").data("owlCarousel") !== undefined){
+						center(current)
+					}
+				}
+				 
+				$("#sync2").on("click", ".owl-item", function(e){
+					e.preventDefault();
+					var number = $(this).data("owlItem");
+					sync1.trigger("owl.goTo", number);
+				});
+				 
+				function center(number){
+					var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+					var num = number;
+					var found = false;
+					for(var i in sync2visible){
+						if(num === sync2visible[i]){
+							var found = true;
+						}
+					}
+				 
+					if(found===false){
+						if(num>sync2visible[sync2visible.length-1]){
+							sync2.trigger("owl.goTo", num - sync2visible.length+2)
+						}else{
+							if(num - 1 === -1){
+								num = 0;
+							}
+							sync2.trigger("owl.goTo", num);
+						}
+					} else if(num === sync2visible[sync2visible.length-1]){
+						sync2.trigger("owl.goTo", sync2visible[1])
+					} else if(num === sync2visible[0]){
+						sync2.trigger("owl.goTo", num-1)
+					}
+				}
+			});
+		});
+	</script>
+</div>

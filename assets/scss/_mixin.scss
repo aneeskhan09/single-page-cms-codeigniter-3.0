@@ -1,0 +1,189 @@
+/*
+ * Title:   Miracle | Responsive Multi-Purpose HTML5 Template - SCSS Mixin
+ * Author:  http://themeforest.net/user/soaptheme
+ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[Table of contents]
+
+1) BORDER RADIUS
+2) OPACITY
+3) BACKGROUND GRADIENT
+4) BOX SHADOW
+5) TEXT SHADOW
+6) TRANSITION
+7) ANIMATION
+8) TRANSFORM
+9) DESATURATE
+10) RETINA
+11) GRADIENT IMAGE
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* 1) BORDER RADIUS */
+@mixin border-radius($top, $right, $bottom, $left) {
+  -webkit-border-radius: $top $right $bottom $left;
+     -moz-border-radius: $top $right $bottom $left;
+      -ms-border-radius: $top $right $bottom $left;
+          border-radius: $top $right $bottom $left;
+}
+
+/* 2) OPACITY */
+@mixin opacity($opacity: 0.5, $important: false) {
+    filter: alpha(opacity=($opacity * 100)) if($important, !important, null);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($opacity * 100) + ")"  if($important, !important, null);
+    -moz-opacity: $opacity  if($important, !important, null);
+    -khtml-opacity: $opacity  if($important, !important, null);
+    opacity: $opacity  if($important, !important, null);
+}
+
+/* 3) BACKGROUND GRADIENT */
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+    background-color: $startColor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+    background-image: -moz-linear-gradient(top, $startColor, $endColor);
+    background-image: -ms-linear-gradient(top, $startColor, $endColor);
+    background-image: -o-linear-gradient(top, $startColor, $endColor);
+    background-image: linear-gradient(top, $startColor, $endColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+/* 4) BOX SHADOW */
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+    -webkit-box-shadow: $inset $x $y $blur $color;
+    -moz-box-shadow: $inset $x $y $blur $color;
+    box-shadow: $inset $x $y $blur $color;
+  } @else {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+  }
+}
+
+/* 5) TEXT SHADOW */
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+/* 6) TRANSITION */
+@mixin transition($what: all, $length: "", $easing: "", $delay: 0s) {
+    @if ($length == "" and $easing == "") {
+        -moz-transition: $what;
+        -o-transition: $what;
+        -webkit-transition: $what;
+        -ms-transition: $what;
+        transition: $what;
+    } @elseif ($what == transform) {
+        @if ($easing != "") {
+            -moz-transition: -moz-transform $length $easing;
+            -o-transition: -o-transform $length $easing;
+            -webkit-transition: -webkit-transform $length $easing;
+            -ms-transition: -ms-transform $length $easing;
+            transition: transform $length $easing;
+        } @else {
+            -moz-transition: -moz-transform $length;
+            -o-transition: -o-transform $length;
+            -webkit-transition: -webkit-transform $length;
+            -ms-transition: -ms-transform $length;
+            transition: transform $length;
+        }
+    } @else {
+        @if ($easing != "") {
+            -moz-transition: $what $length $easing $delay;
+            -o-transition: $what $length $easing $delay;
+            -webkit-transition: $what $length $easing $delay;
+            -ms-transition: $what $length $easing $delay;
+            transition: $what $length $easing $delay;
+        } @else {
+            -moz-transition: $what $length ease-in-out $delay;
+            -o-transition: $what $length ease-in-out $delay;
+            -webkit-transition: $what $length ease-in-out $delay;
+            -ms-transition: $what $length ease-in-out $delay;
+            transition: $what $length ease-in-out $delay;
+        }
+    }
+}
+
+/* 7) ANIMATION */
+@mixin animation($what, $length: 1s, $easing: ease-in-out, $time: "") {
+    @if ($time != "") {
+    -webkit-animation: $what $length $easing $time;
+    -moz-animation: $what $length $easing $time;
+    animation: $what $length $easing $time;
+    } @else {
+    -webkit-animation: $what $length $easing;
+    -moz-animation: $what $length $easing;
+    animation: $what $length $easing;
+    }
+}
+
+/* 8) TRANSFORM */
+@mixin transform($params) {
+    -webkit-transform: $params;
+    -moz-transform: $params;
+    -ms-transform: $params;
+    -o-transform: $params;
+    transform: $params;
+}
+
+@mixin transform-origin($x, $y) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -ms-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
+/* 9) DESATURATE */
+@mixin desaturate() {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    -o-filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+
+@mixin remove-desaturate() {
+    -webkit-filter: none;
+    filter: none;
+    -o-filter: none;
+}
+
+/* 10) RETINA */
+@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("#{$at1x_path}");
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+         all and (-o-min-device-pixel-ratio: 3/2),
+         all and (min--moz-device-pixel-ratio: 1.5),
+         all and (min-device-pixel-ratio: 1.5) {
+           background-image: url("#{$at2x_path}");
+           background-size: $w $h;
+  }
+}
+
+/* 11) GRADIENT IMAGE */
+@mixin halfgradient($from-color, $to-color) {
+    /*background-color: mix($from-color, $to-color);*/
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 50%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color 0%, $to-color 50%); 
+    background-image:    -moz-linear-gradient(top, $from-color 0%, $to-color 50%);
+    background-image:     -ms-linear-gradient(top, $from-color 0%, $to-color 50%);
+    background-image:      -o-linear-gradient(top, $from-color 0%, $to-color 50%);
+    //-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')";
+}
+
+@mixin bottomhalfgradient($from-color, $to-color) {
+    /*background-color: mix($from-color, $to-color);*/
+    background-image: -webkit-gradient(linear, 0% 0%, 50% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color 50%, $to-color 100%); 
+    background-image:    -moz-linear-gradient(top, $from-color 50%, $to-color 100%);
+    background-image:     -ms-linear-gradient(top, $from-color 50%, $to-color 100%);
+    background-image:      -o-linear-gradient(top, $from-color 50%, $to-color 100%);
+    //-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')";
+}
